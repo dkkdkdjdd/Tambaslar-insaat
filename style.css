@@ -1,0 +1,106 @@
+/* İletişim Bölümü Genel Stilleri */
+.contact {
+    background-color: #f9f9f9;
+    padding: 80px 5%;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+/* Sol Taraf: İletişim Bilgileri */
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.info-item i {
+    color: #b8860b; /* Altın Rengi */
+    font-size: 1.5rem;
+    margin-right: 20px;
+    margin-top: 5px;
+}
+
+.info-item h4 {
+    font-size: 1.2rem;
+    color: #1a1a1a;
+    margin-bottom: 5px;
+}
+
+.info-item p {
+    color: #666;
+}
+
+/* Sağ Taraf: Form */
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.3s;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    border-color: #b8860b;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background: #b8860b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #966b05;
+}
+
+/* Harita için özel stil */
+iframe {
+    width: 100%;
+    border-radius: 10px;
+    filter: grayscale(100%); /* Haritayı daha modern/gri yapmak istersen (isteğe bağlı) */
+    transition: 0.5s;
+}
+
+iframe:hover {
+    filter: grayscale(0%);
+}
+
+/* Mobil Uyumluluk */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+}
