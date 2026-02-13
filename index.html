@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        :root { --gold: #b8860b; --black: #1a1a1a; --gray: #f4f4f4; --text: #333; --whatsapp: #25d366; }
+        :root { --gold: #b8860b; --black: #1a1a1a; --gray: #f4f4f4; --text: #333; --whatsapp: #25d366; --phone-bg: #333; }
         * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
         body { font-family: 'Poppins', sans-serif; line-height: 1.6; color: var(--text); background: #fff; }
 
@@ -20,7 +20,7 @@
         .nav-links a { color: #fff; text-decoration: none; font-size: 0.9rem; transition: 0.3s; }
         .nav-links a:hover { color: var(--gold); }
 
-        /* Hero Bölümü - ARKA PLAN FOTOĞRAFI BURADA DEĞİŞTİ */
+        /* Hero Bölümü - Arka Plan Proje2 Yapıldı */
         .hero { 
             height: 70vh; 
             background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('proje2.jpg'); 
@@ -32,55 +32,69 @@
             text-align: center; 
             color: #fff; 
         }
-        .hero h1 { font-family: 'Montserrat'; font-size: 3rem; text-transform: uppercase; letter-spacing: 2px; }
+        .hero h1 { font-family: 'Montserrat'; font-size: 3rem; text-transform: uppercase; }
         .btn-gold { padding: 12px 30px; background: var(--gold); color: #fff; text-decoration: none; border-radius: 5px; font-weight: 600; display: inline-block; margin-top: 20px; transition: 0.3s; }
-        .btn-gold:hover { background: #966b05; transform: translateY(-3px); }
 
-        /* Ortak Bölüm Başlığı */
+        /* Proje & Şantiye Grid Yapıları */
         section { padding: 80px 8%; }
         h2.section-title { text-align: center; font-size: 2.2rem; margin-bottom: 50px; font-family: 'Montserrat'; }
         h2.section-title::after { content: ''; display: block; width: 60px; height: 3px; background: var(--gold); margin: 10px auto; }
-
-        /* Proje Kartları */
-        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        .project-grid, .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
         .card { background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
         .card img { width: 100%; height: 230px; object-fit: cover; }
         .card-body { padding: 20px; }
-
-        /* Video Bölümü */
-        .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 40px; }
-        .video-item { background: #000; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+        .video-item { background: #000; border-radius: 10px; overflow: hidden; }
         .video-item video { width: 100%; aspect-ratio: 16/9; display: block; }
-
-        /* Şantiye Resim Galerisi */
         .santiye-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
-        .santiye-item img { width: 100%; height: 180px; object-fit: cover; border-radius: 8px; transition: 0.3s; }
-        .santiye-item img:hover { transform: scale(1.05); }
+        .santiye-item img { width: 100%; height: 180px; object-fit: cover; border-radius: 8px; }
 
-        /* İletişim */
+        /* İletişim Formu */
         .contact-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
         .info-box { background: var(--gray); padding: 30px; border-radius: 10px; }
-        .info-item { display: flex; align-items: center; margin-bottom: 15px; }
-        .contact-form { display: flex; flex-direction: column; gap: 15px; background: #fff; padding: 20px; border-radius: 10px; }
-        .contact-form input, .contact-form textarea { padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-family: inherit; }
-        .submit-btn { background: var(--gold); color: #fff; padding: 15px; border: none; border-radius: 5px; cursor: pointer; font-weight: 600; transition: 0.3s; }
-        .submit-btn:hover { background: #966b05; }
+        .contact-form { display: flex; flex-direction: column; gap: 15px; }
+        .contact-form input, .contact-form textarea { padding: 12px; border: 1px solid #ddd; border-radius: 5px; }
+        .submit-btn { background: var(--gold); color: #fff; padding: 15px; border: none; border-radius: 5px; cursor: pointer; font-weight: 600; }
 
-        /* WhatsApp Butonu */
-        .whatsapp-btn { position: fixed; bottom: 30px; right: 30px; background-color: var(--whatsapp); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 2px 2px 15px rgba(0,0,0,0.3); z-index: 1000; transition: 0.3s; text-decoration: none; }
-        .whatsapp-btn:hover { transform: scale(1.1); background-color: #1ebea5; }
+        /* YÜZEN BUTONLAR (WhatsApp ve Telefon) */
+        .floating-btn {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: white;
+            box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+            z-index: 1000;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+        .floating-btn:hover { transform: scale(1.1); }
+        
+        /* Sağdaki WhatsApp */
+        .whatsapp-float { bottom: 30px; right: 30px; background-color: var(--whatsapp); }
+        
+        /* Soldaki Telefon */
+        .phone-float { bottom: 30px; left: 30px; background-color: var(--phone-bg); }
 
         footer { background: var(--black); color: #888; text-align: center; padding: 40px; }
 
         @media (max-width: 768px) {
             .contact-wrapper { grid-template-columns: 1fr; }
             .hero h1 { font-size: 2rem; }
+            .floating-btn { width: 50px; height: 50px; font-size: 24px; }
         }
     </style>
 </head>
 <body>
 
-    <a href="https://wa.me/905322560936?text=Merhaba, projeleriniz hakkında bilgi almak istiyorum." class="whatsapp-btn" target="_blank">
+    <a href="tel:905322560936" class="floating-btn phone-float">
+        <i class="fas fa-phone-alt"></i>
+    </a>
+
+    <a href="https://wa.me/905322560936?text=Merhaba, projeleriniz hakkında bilgi almak istiyorum." class="floating-btn whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -108,35 +122,24 @@
     <section id="projeler">
         <h2 class="section-title">2025 Yılında Yapılan Projeler</h2>
         <div class="project-grid">
-            <div class="card">
-                <img src="proje1.jpg"> 
-                <div class="card-body"><h3>Villa Projeleri</h3><p>Doğa ile iç içe yaşam kalitesi</p></div>
-            </div>
-            <div class="card">
-                <img src="proje2.jpg"> 
-                <div class="card-body"><h3>Villa Projeleri</h3><p>Havuzlu lüks villa projeleri</p></div>
-            </div>
-            <div class="card">
-                <img src="proje3.jpg"> 
-                <div class="card-body"><h3>Malikane Projeleri</h3><p>Yüksek kalite standartlarında malikane projeleri</p></div>
-            </div>
+            <div class="card"><img src="proje1.jpg"><div class="card-body"><h3>Villa Projeleri</h3><p>Doğa ile iç içe yaşam kalitesi</p></div></div>
+            <div class="card"><img src="proje2.jpg"><div class="card-body"><h3>Villa Projeleri</h3><p>Havuzlu lüks villa projeleri</p></div></div>
+            <div class="card"><img src="proje3.jpg"><div class="card-body"><h3>Malikane Projeleri</h3><p>Yüksek kalite standartlarında malikane</p></div></div>
         </div>
     </section>
 
     <section id="santiye" style="background-color: #fcfcfc;">
         <h2 class="section-title">Şantiyeden Görüntüler & Videolar</h2>
-        
         <div class="video-grid">
-            <div class="video-item"><video autoplay muted loop playsinline preload="metadata"><source src="santiye-video1.mp4" type="video/mp4"></video></div>
-            <div class="video-item"><video autoplay muted loop playsinline preload="metadata"><source src="santiye-video2.mp4" type="video/mp4"></video></div>
-            <div class="video-item"><video autoplay muted loop playsinline preload="metadata"><source src="santiye-video3.mp4" type="video/mp4"></video></div>
-            <div class="video-item"><video autoplay muted loop playsinline preload="metadata"><source src="santiye-video4.mp4" type="video/mp4"></video></div>
-            <div class="video-item"><video autoplay muted loop playsinline preload="metadata"><source src="santiye-video5.mp4" type="video/mp4"></video></div>
-            <div class="video-item"><video autoplay muted loop playsinline preload="metadata"><source src="santiye-video6.mp4" type="video/mp4"></video></div>
-            <div class="video-item"><video autoplay muted loop playsinline preload="metadata"><source src="santiye-video7.mp4" type="video/mp4"></video></div>
+            <div class="video-item"><video autoplay muted loop playsinline><source src="santiye-video1.mp4" type="video/mp4"></video></div>
+            <div class="video-item"><video autoplay muted loop playsinline><source src="santiye-video2.mp4" type="video/mp4"></video></div>
+            <div class="video-item"><video autoplay muted loop playsinline><source src="santiye-video3.mp4" type="video/mp4"></video></div>
+            <div class="video-item"><video autoplay muted loop playsinline><source src="santiye-video4.mp4" type="video/mp4"></video></div>
+            <div class="video-item"><video autoplay muted loop playsinline><source src="santiye-video5.mp4" type="video/mp4"></video></div>
+            <div class="video-item"><video autoplay muted loop playsinline><source src="santiye-video6.mp4" type="video/mp4"></video></div>
+            <div class="video-item"><video autoplay muted loop playsinline><source src="santiye-video7.mp4" type="video/mp4"></video></div>
         </div>
-
-        <div class="santiye-grid">
+        <div class="santiye-grid" style="margin-top:30px;">
             <div class="santiye-item"><img src="santiye1.jpg"></div>
             <div class="santiye-item"><img src="santiye2.jpg"></div>
             <div class="santiye-item"><img src="santiye3.jpg"></div>
@@ -151,26 +154,20 @@
         <h2 class="section-title">Bize Ulaşın</h2>
         <div class="contact-wrapper">
             <div class="info-box">
-                <div class="info-item"><i class="fas fa-map-marker-alt" style="margin-right:15px; color:var(--gold);"></i> Güven Mah. Posta Cad. No:98/C Güngören/İST</div>
-                <div class="info-item"><i class="fas fa-phone" style="margin-right:15px; color:var(--gold);"></i> 0532 256 09 36</div>
-                <div class="info-item"><i class="fas fa-envelope" style="margin-right:15px; color:var(--gold);"></i> tambaslarinsaat75@gmail.com</div>
-                <div style="margin-top:20px;">
-                    <div style="width: 100%; height: 250px; background: #ddd; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #666;">Harita Yükleniyor...</div>
-                </div>
+                <p><i class="fas fa-map-marker-alt" style="color:var(--gold);"></i> Güven Mah. Posta Cad. No:98/C Güngören/İST</p>
+                <p><i class="fas fa-phone" style="color:var(--gold);"></i> 0532 256 09 36</p>
+                <p><i class="fas fa-envelope" style="color:var(--gold);"></i> tambaslarinsaat75@gmail.com</p>
+                <div style="margin-top:20px; background:#ddd; height:200px; border-radius:10px; display:flex; align-items:center; justify-content:center;">Harita Yakında</div>
             </div>
-
             <form action="https://formspree.io/f/xjgkpraa" method="POST" class="contact-form">
-                <input type="text" name="ad" placeholder="Adınız Soyadınız" required>
-                <input type="email" name="email" placeholder="E-posta Adresiniz" required>
-                <textarea name="mesaj" rows="5" placeholder="Mesajınız..." required></textarea>
-                <button type="submit" class="submit-btn">MESAJI GÖNDER</button>
+                <input type="text" name="ad" placeholder="Adınız" required>
+                <input type="email" name="email" placeholder="E-posta" required>
+                <textarea name="mesaj" rows="4" placeholder="Mesajınız" required></textarea>
+                <button type="submit" class="submit-btn">GÖNDER</button>
             </form>
         </div>
     </section>
 
-    <footer>
-        <p>© 2026 Tambaşlar İnşaat. Tüm Hakları Saklıdır.</p>
-    </footer>
-
+    <footer><p>© 2026 Tambaşlar İnşaat. Tüm Hakları Saklıdır.</p></footer>
 </body>
 </html>
